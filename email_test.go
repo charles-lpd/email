@@ -16,9 +16,9 @@ func TestSendEmailTo(t *testing.T) {
 	</html>
 	`
 	p := SendParams{
-		From:      "xiaopangdong0@gmail.com",
-		Password:  "zamralwiqooobxnl",
-		To:        []string{"charles@ever.finance"},
+		From:      "",
+		Password:  "",
+		To:        []string{""},
 		Title:     "测试标题",
 		ContentType:  "text/html", // text/html or text/plain
 		EmailContent: htmlBody,
