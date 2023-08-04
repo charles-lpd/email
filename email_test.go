@@ -16,10 +16,10 @@ func TestSendEmailTo(t *testing.T) {
 	</html>
 	`
 	p := SendParams{
-		From:      "",
-		Password:  "",
-		To:        []string{""},
-		Title:     "测试标题",
+		From:         "",
+		Password:     "",
+		To:           []string{""},
+		Title:        "测试标题",
 		ContentType:  "text/html", // text/html or text/plain
 		EmailContent: htmlBody,
 		Attachments: []Attachment{{
@@ -32,5 +32,7 @@ func TestSendEmailTo(t *testing.T) {
 	t.Log("Test SendEmail no error")
 	if err != nil {
 		fmt.Println(err)
+	} else {
+		fmt.Println("发送成功")
 	}
 }

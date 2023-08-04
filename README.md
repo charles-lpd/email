@@ -4,7 +4,7 @@
 
 ## 使用条件
 
-1. 打开对应 gmail 邮箱 找到 ` 转发和 POP/IMAP ` 并打开 ` IMAP 访问 `。
+1. 打开对应 gmail 邮箱 找到 `转发和 POP/IMAP` 并打开 `IMAP 访问`。
 2. `Password` 参数，需在对应 Google 账户中 => 安全性 => 开启 `2FA` 并创建 `应用专用密码`。
 
 ## go
@@ -35,7 +35,9 @@ func main() {
 	err := email.SendEmail(p)
 	if err != nil {
 		fmt.Println(err)
-	}
+	} else {
+    fmt.Println("发送成功")
+  }
 
 }
 ```

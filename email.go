@@ -64,8 +64,5 @@ func SendEmail(p SendParams) error {
 
 func FileExists(filepath string) bool {
 	_, err := os.Stat(filepath)
-	if os.IsNotExist(err) {
-		return false
-	}
-	return true
+	return !os.IsNotExist(err)
 }
