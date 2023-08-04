@@ -1,6 +1,11 @@
 # sendEmail
 发送邮件
 
+## 发送条件
+
+1. 打开 gmail 邮箱 找到 ` 转发和 POP/IMAP ` 并打开 ` IMAP 访问 `。
+2. `Password` 参数，需在对应 Google 账户中 => 安全性 => 开启 `2FA` 并创建 `应用专用密码`。
+
 ## go
 
 ```golang
