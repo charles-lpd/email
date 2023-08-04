@@ -20,7 +20,7 @@ func TestSendEmailTo(t *testing.T) {
 		Password:  "zamralwiqooobxnl",
 		To:        []string{"charles@ever.finance"},
 		Title:     "测试标题",
-		ContentType:  "text/html", // text/html // text/plain
+		ContentType:  "text/html", // text/html or text/plain
 		EmailContent: htmlBody,
 		Attachments: []Attachment{{
 			FileName: "文件",          // 配置文件名， 可选参数
