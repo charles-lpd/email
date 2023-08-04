@@ -9,9 +9,9 @@ import (
 
 func TestSendEmailTo(t *testing.T) {
 	htmlBody := `
-		<html lang="en">
+	<html lang="en">
 	  <body>
-			<h1>Hello!</h1>
+	    <h1>Hello!</h1>
 	  </body>
 	</html>
 	`
