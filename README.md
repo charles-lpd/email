@@ -36,8 +36,8 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-    fmt.Println("发送成功")
-  }
+		fmt.Println("发送成功")
+  	}
 
 }
 ```
