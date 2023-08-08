@@ -42,3 +42,7 @@ func main() {
 
 }
 ```
+
+## Web
+
+[`查看 demo`](https://github.com/charles-lpd/send-email-demo)
