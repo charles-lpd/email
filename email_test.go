@@ -15,19 +15,20 @@ func TestSendEmailTo(t *testing.T) {
 	  </body>
 	</html>
 	`
-	p := SendParams{
+	p := MailParams{
 		From:         "",
 		Password:     "",
-		To:           []string{""},
+		To:           []string{"charles@ever.finance"},
 		Title:        "测试标题",
 		ContentType:  "text/html", // text/html or text/plain
 		EmailContent: htmlBody,
-		Attachments: []Attachment{{
-			FileName: "文件",          // 配置文件名， 可选参数
-			FilePath: "./README.md", // 文件地址
-		}}, // 可配置多个附件
 	}
-	err := SendEmail(p)
+	// 本地附件，可配置多个
+	attachment := []Attachment{{
+		FileName: "文件",          // 配置文件名， 可选参数
+		FilePath: "./README.md", // 文件地址
+	}}
+	err := SendEmail(p, attachment)
 	assert.NoError(t, err)
 	t.Log("Test SendEmail no error")
 	if err != nil {

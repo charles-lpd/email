@@ -20,24 +20,25 @@ import (
 
 func main() {
 
-	p := email.SendParams{
+	p := email.MailParams{
 		From:         "",           // 发送者 gmail 地址
 		Password:     "",           // Google 账户的 应用专用密码
 		To:           []string{""}, // 接收着 gmail 地址
 		Title:        "",           // email 标题
 		ContentType:  "",           // email 编码格式 text/html or text/plain
 		EmailContent: "",           // email 主体内容
-		Attachments: []email.Attachment{{ // 附件
-			FileName: "文件",          // 配置文件名， 可选参数
-			FilePath: "./README.md", // 文件地址
-		}}, // 可配置多个附件
 	}
-	err := email.SendEmail(p)
+	// 本地附件，可配置多个
+	attachment := []email.Attachment{{
+		FileName: "文件",          // 配置文件名， 可选参数
+		FilePath: "./README.md", // 文件地址
+	}}// 可配置多个附件
+	err := email.SendEmail(p, attachment)
 	if err != nil {
 		fmt.Println(err)
 	} else {
 		fmt.Println("发送成功")
-  	}
+  }
 
 }
 ```
